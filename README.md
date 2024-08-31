@@ -20,9 +20,9 @@ Run `git clone https://github.com/DevTrapz/ruby-project.git`
 
 The .env file require declarations for
 
-POSTGRES_USER
-POSTGRES_PASSWORD
-RAILS_PORT
+`POSTGRES_USER`
+`POSTGRES_PASSWORD`
+`RAILS_PORT`
 
 # Step 3 - Run docker compose
 
