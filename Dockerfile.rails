@@ -1,0 +1,40 @@
+FROM ubuntu:latest
+
+# Install OS dependencies 
+RUN apt update -y
+RUN apt install -y \
+  ruby \
+  ruby-dev \
+  gcc \
+  make \
+  libyaml-dev \
+  libpq-dev\
+  git \
+  vim \ 
+  postgresql-client-16
+
+RUN chmod -R a+rw /var/lib/gems
+RUN chmod -R a+rw /usr/local/bin
+
+# Non-root user to install Ruby Gems as required 
+RUN useradd -m -p pass rails
+USER rails
+
+# Install Ruby Gems
+RUN gem install \
+  rails \
+  bundler \
+  importmap-rails \
+  turbo-rails \
+  stimulus-rails \
+  debug \
+  web-console \
+  rdoc \
+  pg \
+  psych
+
+WORKDIR /app
+
+# This command only works by manually entry
+# RUN bundle install --path /app/gems --gemfile /app/Gemfile
+

@@ -1,0 +1,1421 @@
+Started GET "/" for 172.22.0.1 at 2024-08-29 18:13:45 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/" for 172.22.0.1 at 2024-08-29 18:38:40 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+  [1m[35m (101.2ms)[0m  [1m[35mCREATE DATABASE "storage/development"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (101.3ms)[0m  [1m[35mCREATE DATABASE "storage/development"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (101.3ms)[0m  [1m[35mCREATE DATABASE "storage/test"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (101.7ms)[0m  [1m[35mCREATE DATABASE "storage/test"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (101.6ms)[0m  [1m[35mCREATE DATABASE "storage/test"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (112.9ms)[0m  [1m[35mCREATE DATABASE "storage/test"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (21.2ms)[0m  [1m[35mCREATE DATABASE "storage/test"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (112.6ms)[0m  [1m[35mCREATE DATABASE "storage/test"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE DATABASE "storage/test"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE DATABASE "storage/test"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE DATABASE "storage/development"."postgres" ENCODING = 'unicode'[0m
+  [1m[35m (97.3ms)[0m  [1m[35mCREATE DATABASE "storage/development" ENCODING = 'unicode'[0m
+  [1m[35m (97.8ms)[0m  [1m[35mCREATE DATABASE "storage/test" ENCODING = 'unicode'[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-08-30 03:05:41.638784', '2024-08-30 03:05:41.638787') RETURNING "key"[0m
+Migrating to CreatePermissions (20240830030429)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830030429)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830030429)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830030429)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830030429)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (64.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "storage/development"[0m
+  [1m[35m (44.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "storage/test"[0m
+  [1m[35m (86.7ms)[0m  [1m[35mCREATE DATABASE "storage/development" ENCODING = 'unicode'[0m
+  [1m[35m (65.3ms)[0m  [1m[35mCREATE DATABASE "storage/test" ENCODING = 'unicode'[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-08-30 03:22:05.230350', '2024-08-30 03:22:05.230354') RETURNING "key"[0m
+Migrating to CreatePermissions (20240830030429)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830030429)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830030429)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830030429)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830030429)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830030429)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.4ms)[0m  [1m[35mCREATE TABLE "permissions" ("permission_id" bigserial primary key, "id" integer, "permission_type" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830030429') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.22.0.1 at 2024-08-30 21:05:02 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to Users (20240830212255)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to Users (20240830212255)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.9ms)[0m  [1m[35mCREATE TABLE "Users" ("id" bigserial primary key, "display_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830212255') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Users (20240830212255)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.3ms)[0m  [1m[35mDROP TABLE "Users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830212255'[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePermissions (20240830030429)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "permissions"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830030429'[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to InitalizeTables (20240830214521)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "display_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "permissions" ("id" bigserial primary key, "user_id" bigint, "type" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE INDEX "index_permissions_on_user_id" ON "permissions" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830214521') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to InitalizeTables (20240830214521)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "permissions"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830214521'[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateUsers (20240830220135)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateUsers (20240830220135)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "display_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830220135') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePermissions (20240830220424)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "permissions" ("id" bigserial primary key, "permission_type" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830220424') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("display_name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["display_name", "Andrew"], ["created_at", "2024-08-30 22:06:14.740466"], ["updated_at", "2024-08-30 22:06:14.740466"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePermissions (20240830220424)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE "permissions"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830220424'[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830220424)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "permissions" ("id" bigserial primary key, "user_id" bigint, "permission_type" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_d9cfa3c257"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_permissions_on_user_id" ON "permissions" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830220424') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.2ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPermission Create (1.1ms)[0m  [1m[32mINSERT INTO "permissions" ("user_id", "permission_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["permission_type", "admin"], ["created_at", "2024-08-30 22:18:02.950569"], ["updated_at", "2024-08-30 22:18:02.950569"]]
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPermission Ids (0.3ms)[0m  [1m[34mSELECT "permissions"."id" FROM "permissions" WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPermission Pluck (0.3ms)[0m  [1m[34mSELECT "permissions"."id" FROM "permissions" WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePermissions (20240830220424)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE "permissions"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830220424'[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830220424)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "permissions" ("id" bigserial primary key, "permission_type" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830220424') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePermissions (20240830220424)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE "permissions"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830220424'[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePermissions (20240830220424)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "permissions" ("id" bigserial primary key, "user_id" bigint, "permission_type" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_permissions_on_user_id" ON "permissions" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830220424') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mPermission Load (0.2ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" ORDER BY "permissions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePodcasts (20240830222701)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "podcasts" ("id" bigserial primary key, "user_id" bigint, "order_id" bigint, "title" character varying, "url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_podcasts_on_user_id" ON "podcasts" ("user_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_podcasts_on_order_id" ON "podcasts" ("order_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830222701') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20240830223112)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830223112') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPodcast Create (1.2ms)[0m  [1m[32mINSERT INTO "podcasts" ("user_id", "order_id", "title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["order_id", nil], ["title", "Rogan"], ["url", "http:/rogan.com/"], ["created_at", "2024-08-30 22:42:49.534973"], ["updated_at", "2024-08-30 22:42:49.534973"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPodcast Create (0.6ms)[0m  [1m[32mINSERT INTO "podcasts" ("user_id", "order_id", "title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["order_id", nil], ["title", "Rogan2"], ["url", "http:/rogan2.com/"], ["created_at", "2024-08-30 22:44:09.739678"], ["updated_at", "2024-08-30 22:44:09.739678"]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPodcast Create (2.0ms)[0m  [1m[32mINSERT INTO "podcasts" ("user_id", "order_id", "title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["order_id", nil], ["title", "Rogan3"], ["url", "http:/rogan3.com/"], ["created_at", "2024-08-30 22:44:24.487368"], ["updated_at", "2024-08-30 22:44:24.487368"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPodcast Create (0.6ms)[0m  [1m[32mINSERT INTO "podcasts" ("user_id", "order_id", "title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["order_id", nil], ["title", "Rogan4"], ["url", "http:/rogan4.com/"], ["created_at", "2024-08-30 22:44:29.078946"], ["updated_at", "2024-08-30 22:44:29.078946"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" ORDER BY "podcasts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" ORDER BY "podcasts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" ORDER BY "podcasts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" ORDER BY "podcasts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (0.9ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2024-08-30 22:47:27.960802"], ["updated_at", "2024-08-30 22:47:27.960802"]]
+  [1m[36mPodcast Update (0.3ms)[0m  [1m[33mUPDATE "podcasts" SET "order_id" = $1, "updated_at" = $2 WHERE "podcasts"."id" = $3[0m  [["order_id", 1], ["updated_at", "2024-08-30 22:47:27.962724"], ["id", 4]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Destroy (0.8ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPodcast Load (0.2ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (0.6ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2024-08-30 22:48:38.640165"], ["updated_at", "2024-08-30 22:48:38.640165"]]
+  [1m[36mPodcast Update (0.3ms)[0m  [1m[33mUPDATE "podcasts" SET "order_id" = $1, "updated_at" = $2 WHERE "podcasts"."id" = $3[0m  [["order_id", 2], ["updated_at", "2024-08-30 22:48:38.641645"], ["id", 1]]
+  [1m[36mPodcast Update (0.3ms)[0m  [1m[33mUPDATE "podcasts" SET "order_id" = $1, "updated_at" = $2 WHERE "podcasts"."id" = $3[0m  [["order_id", 2], ["updated_at", "2024-08-30 22:48:38.642815"], ["id", 4]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPodcast Load (0.2ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."order_id" = $1 /* loading for pp */ LIMIT $2[0m  [["order_id", 2], ["LIMIT", 11]]
+  [1m[36mOrder Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."order_id" = $1 /* loading for pp */ LIMIT $2[0m  [["order_id", 2], ["LIMIT", 11]]
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPodcast Load (0.2ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (0.6ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2024-08-30 22:50:36.670539"], ["updated_at", "2024-08-30 22:50:36.670539"]]
+  [1m[36mPodcast Update (0.3ms)[0m  [1m[33mUPDATE "podcasts" SET "order_id" = $1, "updated_at" = $2 WHERE "podcasts"."id" = $3[0m  [["order_id", 3], ["updated_at", "2024-08-30 22:50:36.672068"], ["id", 3]]
+  [1m[36mPodcast Update (0.3ms)[0m  [1m[33mUPDATE "podcasts" SET "order_id" = $1, "updated_at" = $2 WHERE "podcasts"."id" = $3[0m  [["order_id", 3], ["updated_at", "2024-08-30 22:50:36.673120"], ["id", 2]]
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."order_id" = $1 /* loading for pp */ LIMIT $2[0m  [["order_id", 2], ["LIMIT", 11]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."order_id" = $1 /* loading for pp */ LIMIT $2[0m  [["order_id", 3], ["LIMIT", 11]]
+  [1m[36mOrder Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders"."id" FROM "orders" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mOrder Pluck (0.4ms)[0m  [1m[34mSELECT "orders"."id" FROM "orders"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20240830223112)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830223112'[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePodcasts (20240830222701)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "podcasts"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830222701'[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePodcasts (20240830222701)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "podcasts" ("id" bigserial primary key, "order_id" bigint, "title" character varying, "url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE INDEX "index_podcasts_on_order_id" ON "podcasts" ("order_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830222701') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20240830223112)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830223112') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mOrder Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mPodcast Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "podcasts"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20240830223112)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830223112'[0m
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePodcasts (20240830222701)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE "podcasts"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20240830222701'[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePodcasts (20240830222701)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "podcasts" ("id" bigserial primary key, "title" character varying, "url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830222701') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20240830223112)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "user_id" bigint, "podcast_ids" jsonb, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240830223112') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8201092966875010755)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPodcast Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "podcasts"[0m
+  [1m[36mOrder Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPodcast Create (1.6ms)[0m  [1m[32mINSERT INTO "podcasts" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rogan4"], ["url", "http:/rogan4.com/"], ["created_at", "2024-08-30 23:18:16.842210"], ["updated_at", "2024-08-30 23:18:16.842210"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPodcast Create (0.9ms)[0m  [1m[32mINSERT INTO "podcasts" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rogan3"], ["url", "http:/rogan3.com/"], ["created_at", "2024-08-30 23:18:43.711294"], ["updated_at", "2024-08-30 23:18:43.711294"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPodcast Create (1.0ms)[0m  [1m[32mINSERT INTO "podcasts" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rogan2"], ["url", "http:/rogan2.com/"], ["created_at", "2024-08-30 23:18:53.014519"], ["updated_at", "2024-08-30 23:18:53.014519"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPodcast Create (0.8ms)[0m  [1m[32mINSERT INTO "podcasts" ("title", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rogan1"], ["url", "http:/rogan1.com/"], ["created_at", "2024-08-30 23:19:00.040633"], ["updated_at", "2024-08-30 23:19:00.040633"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPodcast Load (0.2ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" ORDER BY "podcasts"."id" DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPodcast Load (0.2ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" ORDER BY "podcasts"."id" DESC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (1.0ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "podcast_ids", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["podcast_ids", "[3,4]"], ["created_at", "2024-08-30 23:21:06.763890"], ["updated_at", "2024-08-30 23:21:06.763890"]]
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 ORDER BY "orders"."id" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 ORDER BY "orders"."id" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."id" IN ($1, $2) /* loading for pp */ LIMIT $3[0m  [["id", 3], ["id", 4], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 ORDER BY "orders"."id" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 ORDER BY "orders"."id" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."id" IN ($1, $2) /* loading for pp */ LIMIT $3[0m  [["id", 3], ["id", 4], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" ORDER BY "podcasts"."id" ASC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (0.6ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "podcast_ids", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["podcast_ids", "[1,2]"], ["created_at", "2024-08-30 23:26:14.615381"], ["updated_at", "2024-08-30 23:26:14.615381"]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" ORDER BY "podcasts"."id" ASC LIMIT $1[0m  [["LIMIT", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (1.0ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "podcast_ids", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["podcast_ids", "[1,2]"], ["created_at", "2024-08-30 23:28:30.282779"], ["updated_at", "2024-08-30 23:28:30.282779"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1 /* loading for pp */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts" WHERE "podcasts"."id" IN ($1, $2, $3, $4) /* loading for pp */ LIMIT $5[0m  [["id", 3], ["id", 4], ["id", 1], ["id", 2], ["LIMIT", 11]]
+Started GET "/permissions" for 172.22.0.1 at 2024-08-30 23:59:28 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PermissionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/index.html.erb within layouts/application
+  [1m[36mPermission Load (16.4ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions"[0m
+  ↳ app/views/permissions/index.html.erb:8
+  Rendered permissions/index.html.erb within layouts/application (Duration: 24.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 238.7ms | GC: 8.5ms)
+Completed 200 OK in 276ms (Views: 217.9ms | ActiveRecord: 22.1ms (1 query, 0 cached) | GC: 8.5ms)
+
+
+Started GET "/permissions/new" for 172.22.0.1 at 2024-08-30 23:59:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/new.html.erb within layouts/application
+  Rendered permissions/_form.html.erb (Duration: 14.3ms | GC: 0.2ms)
+  Rendered permissions/new.html.erb within layouts/application (Duration: 15.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | GC: 0.3ms)
+Completed 200 OK in 30ms (Views: 17.7ms | ActiveRecord: 6.3ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/permissions/1.json" for 172.22.0.1 at 2024-08-30 23:59:39 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPermission Load (0.2ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions" WHERE "permissions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/permissions_controller.rb:63:in `set_permission'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Permission with 'id'=1):
+  
+app/controllers/permissions_controller.rb:63:in `set_permission'
+Started GET "/favicon.ico" for 172.22.0.1 at 2024-08-30 23:59:40 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/permissions" for 172.22.0.1 at 2024-08-31 00:02:22 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/index.html.erb within layouts/application
+  [1m[36mPermission Load (0.9ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions"[0m
+  ↳ app/views/permissions/index.html.erb:8
+  Rendered permissions/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | GC: 0.1ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/permissions/new" for 172.22.0.1 at 2024-08-31 00:02:23 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/new.html.erb within layouts/application
+  Rendered permissions/_form.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered permissions/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/permissions" for 172.22.0.1 at 2024-08-31 00:06:44 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PermissionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/index.html.erb within layouts/application
+  [1m[36mPermission Load (20.0ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions"[0m
+  ↳ app/views/permissions/index.html.erb:8
+  Rendered permissions/index.html.erb within layouts/application (Duration: 30.7ms | GC: 11.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 122.1ms | GC: 55.4ms)
+Completed 200 OK in 145ms (Views: 102.2ms | ActiveRecord: 23.6ms (1 query, 0 cached) | GC: 57.6ms)
+
+
+Started GET "/permissions/new" for 172.22.0.1 at 2024-08-31 00:06:56 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/new.html.erb within layouts/application
+  Rendered permissions/_form.html.erb (Duration: 9.4ms | GC: 0.0ms)
+  Rendered permissions/new.html.erb within layouts/application (Duration: 10.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.0ms)
+Completed 200 OK in 14750ms (Views: 12.8ms | ActiveRecord: 5.4ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/permissions/new" for 172.22.0.1 at 2024-08-31 00:07:16 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/new.html.erb within layouts/application
+  Rendered permissions/_form.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered permissions/new.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 6973ms (Views: 4.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/permissions" for 172.22.0.1 at 2024-08-31 00:07:27 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/index.html.erb within layouts/application
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions"[0m
+  ↳ app/views/permissions/index.html.erb:8
+  Rendered permissions/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/permissions" for 172.22.0.1 at 2024-08-31 00:07:31 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/index.html.erb within layouts/application
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT "permissions".* FROM "permissions"[0m
+  ↳ app/views/permissions/index.html.erb:8
+  Rendered permissions/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 172.22.0.1 at 2024-08-31 00:08:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.2.0/gems/railties-7.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/permissions" for 172.22.0.1 at 2024-08-31 00:08:51 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as HTML
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:312:in `handle_unverified_request'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:406:in `handle_unverified_request'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:395:in `verify_authenticity_token'
+activesupport (7.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.2.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (7.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack (3.1.7) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/permissions" for 172.22.0.1 at 2024-08-31 00:09:19 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PermissionsController#create as HTML
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:312:in `handle_unverified_request'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:406:in `handle_unverified_request'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:395:in `verify_authenticity_token'
+activesupport (7.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.2.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (7.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack (3.1.7) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/permissions" for 172.22.0.1 at 2024-08-31 00:10:09 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as HTML
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:312:in `handle_unverified_request'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:406:in `handle_unverified_request'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:395:in `verify_authenticity_token'
+activesupport (7.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.2.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (7.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack (3.1.7) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/permissions" for 172.22.0.1 at 2024-08-31 00:10:46 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as HTML
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:312:in `handle_unverified_request'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:406:in `handle_unverified_request'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:395:in `verify_authenticity_token'
+activesupport (7.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+activesupport (7.2.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (7.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack (3.1.7) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/permissions" for 172.22.0.1 at 2024-08-31 00:11:51 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as HTML
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 71867ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 16.7ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: permission):
+  
+app/controllers/permissions_controller.rb:71:in `permission_params'
+app/controllers/permissions_controller.rb:27:in `create'
+Started POST "/permissions" for 172.22.0.1 at 2024-08-31 00:13:31 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Error occurred while parsing request parameters.
+Contents:
+
+{permission_type: "admin"}
+Processing by PermissionsController#create as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+
+Causes:
+JSON::ParserError (unexpected token at '{permission_type: "admin"}')
+  
+actionpack (7.2.1) lib/action_dispatch/http/parameters.rb:98:in `rescue in parse_formatted_parameters'
+actionpack (7.2.1) lib/action_dispatch/http/parameters.rb:94:in `parse_formatted_parameters'
+actionpack (7.2.1) lib/action_dispatch/http/request.rb:405:in `block in POST'
+rack (3.1.7) lib/rack/request.rb:107:in `fetch'
+rack (3.1.7) lib/rack/request.rb:107:in `fetch_header'
+actionpack (7.2.1) lib/action_dispatch/http/request.rb:404:in `POST'
+actionpack (7.2.1) lib/action_dispatch/http/parameters.rb:57:in `parameters'
+actionpack (7.2.1) lib/action_controller/metal/strong_parameters.rb:1334:in `params'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:606:in `form_authenticity_param'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:475:in `request_authenticity_tokens'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:468:in `any_authenticity_token_valid?'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:463:in `verified_request?'
+actionpack (7.2.1) lib/action_controller/metal/request_forgery_protection.rb:392:in `verify_authenticity_token'
+activesupport (7.2.1) lib/active_support/callbacks.rb:362:in `block in make_lambda'
+activesupport (7.2.1) lib/active_support/callbacks.rb:179:in `block in call'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.2.1) lib/active_support/callbacks.rb:180:in `call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `block in invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `each'
+activesupport (7.2.1) lib/active_support/callbacks.rb:559:in `invoke_before'
+activesupport (7.2.1) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.6) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.6) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.2.1) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.2.1) lib/action_text/rendering.rb:25:in `with_renderer'
+actiontext (7.2.1) lib/action_text/engine.rb:71:in `block (4 levels) in <class:Engine>'
+activesupport (7.2.1) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.2.1) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.2.1) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.2.1) lib/abstract_controller/callbacks.rb:260:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/rescue.rb:27:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:77:in `block in process_action'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `block in instrument'
+activesupport (7.2.1) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.2.1) lib/active_support/notifications.rb:210:in `instrument'
+actionpack (7.2.1) lib/action_controller/metal/instrumentation.rb:76:in `process_action'
+actionpack (7.2.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.2.1) lib/active_record/railties/controller_runtime.rb:39:in `process_action'
+actionpack (7.2.1) lib/abstract_controller/base.rb:163:in `process'
+actionview (7.2.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack (3.1.7) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/method_override.rb:28:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/permissions" for 172.22.0.1 at 2024-08-31 00:13:47 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as HTML
+  Parameters: {"permission_type"=>"admin", "permission"=>{"permission_type"=>"admin"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/permissions_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/permissions_controller.rb:30:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering permissions/new.html.erb within layouts/application
+  Rendered permissions/_form.html.erb (Duration: 3.4ms | GC: 0.0ms)
+  Rendered permissions/new.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | GC: 0.3ms)
+Completed 422 Unprocessable Content in 80512ms (Views: 47.6ms | ActiveRecord: 23.2ms (0 queries, 0 cached) | GC: 68.6ms)
+
+
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:16:03 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission_type"=>"admin", "permission"=>{"permission_type"=>"admin"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 97685ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:17:57 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission_type"=>"admin", "user_id"=>1, "permission"=>{"user_id"=>1, "permission_type"=>"admin"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa790056c40>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+Completed 422 Unprocessable Content in 4240ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:20:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission_type"=>"admin", "user_id"=>1, "permission"=>{"user_id"=>1, "permission_type"=>"admin"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900b19b0>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :permission_type. Context: {  }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900b19b0>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/permissions_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/permissions_controller.rb:31:in `block in create'
+Completed 422 Unprocessable Content in 2784ms (Views: 0.5ms | ActiveRecord: 7.1ms (0 queries, 0 cached) | GC: 3.6ms)
+
+
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:23:57 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission_type"=>"admin", "user_id"=>1, "permission"=>{"user_id"=>1, "permission_type"=>"admin"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :permission_type. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa773b67a98>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+Completed 500 Internal Server Error in 11816ms (ActiveRecord: 3.9ms (0 queries, 0 cached) | GC: 14.9ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/permissions_controller.rb:29:in `create'
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:24:17 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission_type"=>"admin", "user_id"=>1, "permission"=>{"user_id"=>1, "permission_type"=>"admin"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :permission_type. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :permission_type. Context: {  }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :permission_type. Context: {  }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :permission_type. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :permission_type. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameters: :user_id, :permission_type. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameters: :user_id, :permission_type. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameter: :permission_type. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+[31mUnpermitted parameters: :permission_type, :format, :permission. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa7900946a8>, params: {"permission_type"=>"admin", "user_id"=>1, "controller"=>"permissions", "action"=>"create", "format"=>"json", "permission"=>{"user_id"=>1, "permission_type"=>"admin"}} }[0m
+Completed 500 Internal Server Error in 491802ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 4.4ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/permissions_controller.rb:29:in `create'
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:32:33 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :permission_type. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa79002d840>, params: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}, "controller"=>"permissions", "action"=>"create", "format"=>"json"} }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa79002d840>, params: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}, "controller"=>"permissions", "action"=>"create", "format"=>"json"} }[0m
+Completed 500 Internal Server Error in 45346ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.1ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/permissions_controller.rb:29:in `create'
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:34:10 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :permission_type. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa773b65fb8>, params: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}, "controller"=>"permissions", "action"=>"create", "format"=>"json"} }[0m
+Completed 500 Internal Server Error in 49043ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/permissions_controller.rb:29:in `create'
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:35:07 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa792e09390>, params: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}, "controller"=>"permissions", "action"=>"create", "format"=>"json"} }[0m
+Completed 400 Bad Request in 19597ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 6.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: permission):
+  
+app/controllers/permissions_controller.rb:27:in `create'
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:35:55 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}}
+Can't verify CSRF token authenticity.
+  [1m[36mPermission Count (12.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "permissions"[0m
+  ↳ (byebug):1:in `create'
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa790034398>, params: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}, "controller"=>"permissions", "action"=>"create", "format"=>"json"} }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa790034398>, params: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}, "controller"=>"permissions", "action"=>"create", "format"=>"json"} }[0m
+[31mUnpermitted parameters: :permission, :format. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa790034398>, params: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}, "controller"=>"permissions", "action"=>"create", "format"=>"json"} }[0m
+[31mUnpermitted parameters: :permission, :format. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa790034398>, params: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}, "controller"=>"permissions", "action"=>"create", "format"=>"json"} }[0m
+[31mUnpermitted parameter: :user_id. Context: { controller: PermissionsController, action: create, request: #<ActionDispatch::Request:0x00007fa790034398>, params: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}, "controller"=>"permissions", "action"=>"create", "format"=>"json"} }[0m
+Completed 400 Bad Request in 300802ms (ActiveRecord: 15.3ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: permission):
+  
+app/controllers/permissions_controller.rb:27:in `create'
+Started POST "/permissions.json" for 172.22.0.1 at 2024-08-31 00:41:23 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PermissionsController#create as JSON
+  Parameters: {"permission"=>{"permission_type"=>"admin", "user_id"=>1}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/permissions_controller.rb:33:in `block in create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/permissions_controller.rb:33:in `block in create'
+  [1m[36mPermission Create (1.3ms)[0m  [1m[32mINSERT INTO "permissions" ("user_id", "permission_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["permission_type", "admin"], ["created_at", "2024-08-31 00:41:58.458980"], ["updated_at", "2024-08-31 00:41:58.458980"]]
+  ↳ app/controllers/permissions_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/permissions_controller.rb:33:in `block in create'
+  Rendering permissions/show.json.jbuilder
+  Rendered permissions/_permission.json.jbuilder (Duration: 0.5ms | GC: 0.0ms)
+  Rendered permissions/show.json.jbuilder (Duration: 1.5ms | GC: 0.0ms)
+Completed 201 Created in 34917ms (Views: 3.3ms | ActiveRecord: 14.0ms (2 queries, 0 cached) | GC: 87.2ms)
+
+
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:20 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:20 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:20 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:20 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:32 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:32 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:32 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:32 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:34 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:34 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:39 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:40 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:41 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:41 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
+Started GET "/stream" for 172.22.0.1 at 2024-08-31 01:23:42 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/stream"):
+  
