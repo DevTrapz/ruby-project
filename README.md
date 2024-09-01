@@ -1,14 +1,15 @@
 # Getting Started using Docker
 
-Application Setup Requires 4 Steps
+Application Setup Requires 5 Steps
 
 1. Clone repository to your Machine
 2. Setup .env file
 3. Run docker compose up
-4. Enter Rails container and manually install Gems (currently a work around)
+4. Enter Rails container then manually install Gems and initalize database
+   (currently a work around)
 
-Important note: when running `rails generate` rails creates files by a custom user,
-you won't have access to edit the file outside the container. When using the
+Important note: when running `rails generate` rails creates files by a custom
+user, you won't have access to edit the file outside the container. When using the
 `rails generate` add permissions to all users to read/write the directories files
 `sudo chmod -R a+rw ./rails`. This is just a work around for now.
 
@@ -30,12 +31,13 @@ Run `docker compose up --build -d` to build images and run in detached mode
 
 # Step 4 - Enter Rails container and manually install Gems
 
-The rails container doesn't like installing gems from the dockerfile
-so you need to enter the container and install the gems manually.
+The rails container doesn't like installing gems or initalizing the database
+from the dockerfileso you need to enter the container and install the gems
+manually. Follow this sequence
 
-Enter the container `docker exec -it rails /bin/bash`
-
-Install gems `bundler install`
+1. Enter the container `docker exec -it rails /bin/bash`
+2. Install gems `bundler install`
+3. Initialize database `rake db:create` and `rails db:migrate`
 
 # How to connect to Postgres
 
