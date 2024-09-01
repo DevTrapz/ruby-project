@@ -23,11 +23,16 @@ class PermissionsController < ApplicationController
 
   # POST /permissions or /permissions.json
   def create
-    byebug
-    # permission_params.require(:permission).permit(:user_id)
-    type = params[:permission][:permission_type]
-    user_id = params[:permission][:user_id]
-    @permission = Permission.new(permission_type:type, user_id:user_id)
+    # Request:
+    # { 
+    #   "permission": 
+    #     {
+    #       "permission_type": string,
+    #       "user_id": number
+    #     }
+    # }
+    permission = params[:permission].permit(:user_id,:permission_type)
+    @permission = Permission.new(permission)
 
     respond_to do |format|
       if @permission.save
