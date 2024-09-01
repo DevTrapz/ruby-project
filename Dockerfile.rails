@@ -16,9 +16,24 @@ RUN apt install -y \
 RUN chmod -R a+rw /var/lib/gems
 RUN chmod -R a+rw /usr/local/bin
 
+
+# Setup command history for root user
+RUN mkdir commandhistory
+RUN chmod -R a+rw /commandhistory
+RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/root/.bash_history" \
+  && mkdir "/commandhistory/root" \  
+  && echo "$SNIPPET" >> "/root/.bashrc"
+
 # Non-root user to install Ruby Gems as required 
 RUN useradd -m -p pass rails
 USER rails
+
+# Setup command history for non-root user
+ARG USERNAME=rails
+RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/$USERNAME/.bash_history" \
+  && mkdir "/commandhistory/$USERNAME" \
+  && touch "/commandhistory/$USERNAME/.bash_history" \
+  && echo "$SNIPPET" >> "/home/$USERNAME/.bashrc"
 
 # Install Ruby Gems
 RUN gem install \
@@ -37,4 +52,3 @@ WORKDIR /app
 
 # This command only works by manually entry
 # RUN bundle install --path /app/gems --gemfile /app/Gemfile
-

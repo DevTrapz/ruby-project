@@ -22,7 +22,7 @@ services:
     volumes:
       - ./rails/:/app
       - gems:/var/lib/gems
-      - rails-bash-history:/home
+      - rails-bash-history:/commandhistory
     ports:
       - ${RAILS_PORT}:3000
     environment:
