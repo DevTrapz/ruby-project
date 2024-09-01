@@ -50,5 +50,7 @@ RUN gem install \
 
 WORKDIR /app
 
-# This command only works by manually entry
-# RUN bundle install --path /app/gems --gemfile /app/Gemfile
+# This command only works by manually entry ()
+# RUN bundle install
+# RUN rake db:create
+# RUN rails db:migrate

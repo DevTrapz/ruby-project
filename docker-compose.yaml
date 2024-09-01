@@ -6,7 +6,7 @@ services:
     volumes:
       - ./postgres/:/docker-entrypoint-initdb.d
       - postgres-data:/var/lib/postgresql/data
-      - postgres-bash-history:/home
+      - postgres-bash-history:/commandhistory
     restart: always
     shm_size: 128mb
     environment:
