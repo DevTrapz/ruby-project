@@ -19,17 +19,36 @@ module Users
         User.create(display_name: display_name)
       end
 
+      desc "Update a user by id"
+      params do
+        requires :id, type: Integer, desc: "User id."
+        requires :display_name, type: String, desc: "User display name."
+      end
+      put :id do
+        begin
+          display_name = params[:display_name]
+          id = params[:id]
+          user = User.find(id)
+          user.update(display_name: display_name)
+          status 200
+          body({ success: true, message: "User updated successfully" })
+        rescue ActiveRecord::RecordNotFound
+          status 404
+          body({ success: false, user_id: params[:id], message: "User does not exist" })
+        end
+      end
+
       desc "Delete a user by id"
       params do
         requires :id, type: Integer, desc: "User id."
       end
       delete :id do
+        id = params[:id]
         begin
-          id = params[:id]
-          user = User.where(id: id).pluck(:display_name)
-          User.find(id).destroy!
+          user = User.find(id)
+          user.destroy!
           status 200
-          body({ success: true, id: id, message: "#{user[0]} deleted successfully" })
+          body({ success: true, id: id, message: "#{user.display_name} deleted successfully" })
         rescue ActiveRecord::RecordNotFound
           status 404
           body({ success: false, id: id, message: "User does not exist" })

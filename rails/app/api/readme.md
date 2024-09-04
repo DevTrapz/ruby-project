@@ -11,5 +11,11 @@
 
 # DELETE - Remove a User by ID
 
-    Method: DELETE
+    Method: Delete
     Endpoint: `http://<host>:<port>/api/users/id?id=<userid>`
+
+# PUT - Update a User name by ID
+
+    Method: Put
+    Endpoint: `http://<host>:<port>/api/users/id`
+    BodyJSON: `{"id": "1", "display_name":"Andrew"}`
