@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Users::API => '/'
   resources :permissions
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
