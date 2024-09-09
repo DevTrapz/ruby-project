@@ -35,22 +35,9 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhisto
   && touch "/commandhistory/$USERNAME/.bash_history" \
   && echo "$SNIPPET" >> "/home/$USERNAME/.bashrc"
 
-# Install Ruby Gems
-RUN gem install \
-  rails \
-  bundler \
-  importmap-rails \
-  turbo-rails \
-  stimulus-rails \
-  debug \
-  web-console \
-  rdoc \
-  pg \
-  psych
-
 WORKDIR /app
 
-# This command only works by manually entry ()
+# These commands only work by manually executing within container
 # RUN bundle install
 # RUN rake db:create
 # RUN rails db:migrate
