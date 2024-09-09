@@ -127,6 +127,11 @@ GEM
       mustermann-grape (~> 1.1.0)
       rack (>= 2)
       zeitwerk
+    grape-swagger (2.1.0)
+      grape (>= 1.7, < 3.0)
+      rack-test (~> 2)
+    grape-swagger-rails (0.5.0)
+      railties (>= 6.0.6.1)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.1)
@@ -194,6 +199,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.7)
+    rack-cors (2.0.2)
+      rack (>= 2.0.0)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -345,12 +352,14 @@ DEPENDENCIES
   brakeman
   byebug
   capybara
-  debug
   grape
+  grape-swagger
+  grape-swagger-rails
   importmap-rails
   jbuilder
   pg
   puma (>= 5.0)
+  rack-cors
   rails (~> 7.2.1)
   rubocop-rails-omakase
   selenium-webdriver

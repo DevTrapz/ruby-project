@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  mount Users::API => '/'
+  mount Api::Root => '/'
+  mount GrapeSwaggerRails::Engine => '/swagger'
   resources :permissions
 
   get "up" => "rails/health#show", as: :rails_health_check

@@ -15,6 +15,10 @@ gem "byebug"
 gem "awesome_print"
 gem "grape"
 gem "activerecord-import"
+gem "rack-cors"
+gem 'grape'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
