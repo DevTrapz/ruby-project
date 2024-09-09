@@ -3,7 +3,7 @@ module Users
     version "v1", using: :header, vendor: "users"
     format :json
     prefix :api
-
+    
     resource :users do
       desc "Retrieve  all users"
       get :all do

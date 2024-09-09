@@ -24,3 +24,4 @@
 
 /rails/tmp/*
 /rails/log/*
+/rails/.byebug_history
