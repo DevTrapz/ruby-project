@@ -16,6 +16,7 @@ gem "rack-cors"
 gem 'grape'
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
+gem 'rspec-rails'
 
 group :development, :test do
   gem "brakeman", require: false
