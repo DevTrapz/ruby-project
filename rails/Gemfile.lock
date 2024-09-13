@@ -341,7 +341,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rack-cors
   rails (~> 7.2.1)
-  rspec-rails
+  rspec-rails (~> 7.0.0)
   rubocop-rails-omakase
   selenium-webdriver
   sprockets-rails

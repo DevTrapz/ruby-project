@@ -16,9 +16,9 @@ gem "rack-cors"
 gem 'grape'
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
-gem 'rspec-rails'
 
 group :development, :test do
+  gem 'rspec-rails', '~> 7.0.0'
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false
 end
