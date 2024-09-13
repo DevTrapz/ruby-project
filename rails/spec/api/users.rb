@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe Api::Root, type: :request do
+describe Admin::Users, type: :request do
 
   context 'GET /api/users/all' do
     it 'returns all users' do

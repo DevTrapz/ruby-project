@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount Api::Root => '/'
+  mount API::Root => '/'
   mount GrapeSwaggerRails::Engine => '/swagger'
   resources :permissions
 
