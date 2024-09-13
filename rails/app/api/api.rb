@@ -4,24 +4,30 @@ class UserAPI < Grape::API
   prefix :api
   
   resource :users do
-    desc "Retrieve  all users"
+    desc "Retrieve all users"
     get :all do
       User.all
     end
 
     desc "Create a user"
     params do
-      requires :display_name, type: String, desc: "User display name."
+      requires :display_name, type: String, desc: "user display name"
+      requires :email, type: String, desc: "user email"
     end
     post do
-      display_name = params[:display_name]
-      User.create(display_name: display_name)
+      begin
+        User.create(display_name: params[:display_name], email: params[:email])
+      rescue ActiveRecord::RecordNotUnique
+        status 400
+        body({error: "email already exist" })
+      end  
     end
 
     desc "Update a user by id"
     params do
-      requires :id, type: Integer, desc: "User id."
-      requires :display_name, type: String, desc: "User display name."
+      requires :id, type: Integer, desc: "user id"
+      optional :email, type: String, desc: "user email"
+      optional :display_name, type: String, desc: "user display name"
     end
     put :id do
       begin
@@ -30,16 +36,16 @@ class UserAPI < Grape::API
         user = User.find(id)
         user.update(display_name: display_name)
         status 200
-        body({ success: true, message: "User updated successfully" })
+        body({ success: "user updated successfully", id: "#{id}" })
       rescue ActiveRecord::RecordNotFound
         status 404
-        body({ success: false, user_id: params[:id], message: "User does not exist" })
+        body({ error: "user does not exist" })
       end
     end
 
     desc "Delete a user by id"
     params do
-      requires :id, type: Integer, desc: "User id."
+      requires :id, type: Integer, desc: "user id"
     end
     delete :id do
       id = params[:id]
@@ -47,10 +53,10 @@ class UserAPI < Grape::API
         user = User.find(id)
         user.destroy!
         status 200
-        body({ success: true, id: id, message: "#{user.display_name} deleted successfully" })
+        body({ success: "#{user.display_name} deleted successfully" })
       rescue ActiveRecord::RecordNotFound
         status 404
-        body({ success: false, id: id, message: "User does not exist" })
+        body({ error: "user does not exist" })
       end
     end
   end
