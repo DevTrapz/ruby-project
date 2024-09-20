@@ -24,6 +24,9 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhisto
   && mkdir "/commandhistory/root" \  
   && echo "$SNIPPET" >> "/root/.bashrc"
 
+# Adds default read write permissions to Rails/Rake generated files 
+RUN echo "umask 000" >> "/home/ubuntu/.bashrc"
+
 # Non-root user to install Ruby Gems as required 
 RUN useradd -m -p pass rails
 USER rails
@@ -33,7 +36,8 @@ ARG USERNAME=rails
 RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/$USERNAME/.bash_history" \
   && mkdir "/commandhistory/$USERNAME" \
   && touch "/commandhistory/$USERNAME/.bash_history" \
-  && echo "$SNIPPET" >> "/home/$USERNAME/.bashrc"
+  && echo "$SNIPPET" >> "/home/$USERNAME/.bashrc" \
+  && echo "umask 000" >> "/home/$USERNAME/.bashrc"
 
 # Install bundler gem
 RUN gem install bundler 
