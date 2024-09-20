@@ -25,3 +25,4 @@
 /rails/tmp/*
 /rails/log/*
 /rails/.byebug_history
+rails/db/schema.rb
