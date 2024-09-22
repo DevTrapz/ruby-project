@@ -8,10 +8,15 @@ module Admin
         optional :teacher_id, type: String, desc: "teacher id"
       end
       post :upload_gradebook do
-        filepath = params[:csv][:tempfile].path
-        teacher = Teacher.where(id: params[:teacher_id][0])
-        Student.find_or_create_from_csv(filepath, teacher)        
-        body({ success: "csv uploaded successfully"})
+        begin
+          filepath = params[:csv][:tempfile].path
+          teacher = Teacher.find(params[:teacher_id])
+          Student.find_or_create_from_csv(filepath, teacher)        
+          body({ success: "csv uploaded successfully"})
+        rescue
+          status 400
+          body({ failed: "csv uploaded failed"})
+        end
       end
 
       desc "Retrieve all teacher's students" 
