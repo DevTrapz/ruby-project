@@ -2,20 +2,46 @@ class SchoologyRecord < ApplicationRecord
   belongs_to :student, -> {select("*,first_name || ' ' || last_name || ' (' || username || ')' as name")}, class_name: "Student", foreign_key: "student_id"
   belongs_to :course
 
-  def get_roa roa_number=1
+  def get_roa_headers roa_number=1
     roa_headers = grades.to_h.keys.select{|k| k.include?("ROA #{roa_number}")}
+  end
+
+  def get_roa roa_number=1
+    roa_headers = get_roa_headers(roa_number)
     grades.select{|header,value| roa_headers.include?(header)}.to_h
   end
 
-  def course_attendance_grade roa_number=1, days_in_roa = 8
+  def get_roa_data_from_headers roa_number=1
+    roa_headers = get_roa_headers(roa_number)
+    roa_headers.reject!{|a| a.include?("- Category Score")}
+    line = Struct.new(:points,:date,:cat)
+    regex = /\(Max Points: (.*?), Due Date: (.*?), Grading Category: (.*?)\)/
+    roa_headers.map do |header|
+      header.match(regex){|m| line.new(*m.captures)}.to_h
+    end. map do |hash|
+      hash[:date] = DateTime.strptime(hash[:date], '%m/%d/%y')
+      hash
+    end
+
+  end
+
+  def course_attendance_grade roa_number=1, days_in_roa
     assignments = get_roa(roa_number).select{|header,value| header.include?("Grading Category: ")}
     completed = assignments.values.map {|value| (value.to_i > 0) ? 1 : 0 }.sum
     percentage = (completed.to_f/assignments.count)
+    roa_data = get_roa_data_from_headers(roa_number)
+    # All days between dates (Include weekends)
+    # days_in_roa = (roa_data.max{|a| a[:date]}[:date] - roa_data.min{|a| a[:date]}[:date]).to_i
+    # weekdays only
+    days_in_roa = days_in_roa || (roa_data.min{|a| a[:date]}[:date]..roa_data.max{|a| a[:date]}[:date]).count {|date| date.wday >= 1 && date.wday <= 5}
+    days = (days_in_roa*percentage).round(2)
     {
       completed_assignments: completed,
       total_assignments: assignments.count,
       percentage: percentage.round(3),
-      days: (days_in_roa*percentage).round
+      days_in_roa: days_in_roa,
+      days: days,
+      days_under: days_in_roa - days
     }
   end
 
