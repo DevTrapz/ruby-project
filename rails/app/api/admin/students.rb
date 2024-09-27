@@ -5,48 +5,64 @@ module Admin
       desc "Upload gradebook csv into students", consumes: ['multipart/form-data']
       params do
         requires :csv, type: File, desc: "schoology grade book csv data"
-        optional :teacher_id, type: String, desc: "teacher id"
-      end
-      post :upload_gradebook do
-        begin
-          filepath = params[:csv][:tempfile].path
-          teacher = Teacher.find(params[:teacher_id])
-          Student.find_or_create_from_csv(filepath, teacher)        
-          body({ success: "csv uploaded successfully"})
-        rescue
-          status 400
-          body({ failed: "csv uploaded failed"})
-        end
-      end
-
-      desc "Retrieve all teacher's students" 
-      params do
         requires :teacher_id, type: Integer, desc: "teacher id"
       end
-      get :teacher_students do
-        Teacher.find(params[:teacher_id]).students.all
-      end
-
-      desc "Retrieve student by lauid or username" 
-      params do
-        optional :lauid, type: String, desc: "student lauid"
-        optional :username, type: String, desc: "student username id"
-        exactly_one_of :lauid, :username
-      end
-      get :student do
-        search = params.reject{ |k, v| v.nil? }.first
-        students = Student.where("#{search[0]}": "#{search[1]}")
-        students = students.map do |student|
-          student.schoology_records
+      post "upload_gradebook/teacher/:teacher_id" do
+        filepath = params[:csv][:tempfile].path
+        unless SchoologyRecord.validate_csv(filepath)
+          body({ error: "csv invalid format"})
+          return status 400
         end
+        teacher = Teacher.where(id: params[:teacher_id]).first
+        unless teacher
+          body({ error: "teacher does not exist" })
+          return status 404        
+        end
+        Student.find_or_create_from_csv(filepath, teacher)        
+        body({ success: "csv uploaded successfully"})
       end
 
-      desc "Retrieve all student grades by teacher and ROA number" 
+      desc "Retrieve all teacher students" 
       params do
-        requires :teacher_id, type: Integer, desc: "teacher id"
-        requires :roa_number, type: Integer, desc: "retrieve grades for a ROA number"
+        requires :teacher_id, type: Integer
       end
-      get :roa_teacher_students_grades do
+      get "teacher/:teacher_id" do
+        teacher = Teacher.where(id: params[:teacher_id]).first
+        unless teacher
+          body({ error: "teacher does not exist" })
+          return status 404        
+        end
+        teacher.students.all
+      end
+
+      desc "Retrieve a student" 
+      params do
+        requires :student_id, type: Integer
+      end
+      get "student/:student_id" do
+        student = Student.where(id: params[:student_id]).first
+        unless student
+          body({ error: "teacher does not exist" })
+          return status 404        
+        end
+        student
+      end
+      
+      desc "Retrieve all student grades by teacher id and ROA number" 
+      params do
+        requires :teacher_id, type: Integer
+        requires :roa_number, type: Integer
+      end
+      get "grades/teacher/:teacher_id/roa/:roa_number" do
+        unless Teacher.where(id: params[:teacher_id]).first
+          body({ error: "teacher does not exist" })
+          return status 404        
+        end
+        roa = Student.last.schoology_records.map{|a| a.get_roa(params[:roa_number])}.first
+        if roa == {}
+          body({ error: "roa does not exist" })
+          return status 404        
+        end
         students = Student.where(teacher_id: params[:teacher_id])
         
         grades = students.map do |student|
@@ -56,16 +72,21 @@ module Admin
       
       desc "Retrieve a student grades by lauid or username and ROA number" 
       params do
-        requires :roa_number, type: Integer, desc: "retrieve grading period ROA number "
-        optional :lauid, type: String, desc: "student lauid"
-        optional :username, type: String, desc: "student username id"
-        exactly_one_of :lauid, :username
+        requires :roa_number, type: Integer, desc: "retrieve grades by ROA number"
+        requires :student_id, type: Integer
       end
-      get :roa_student_grades do
-        search = params.reject{ |k, v| v.nil? || k == "roa_number"}.first
-        student = Student.where("#{search[0]}": "#{search[1]}").first        
-
-        SchoologyRecord.get_grades(student.schoology_records, params[:roa_number])
+      get "grades/student/:student_id/roa/:roa_number" do
+        student = Student.where(id: params[:student_id]).first
+        unless student
+          body({ error: "student does not exist" })
+          return status 404        
+        end
+        roa = Student.last.schoology_records.map{|a| a.get_roa(params[:roa_number])}.first
+        if roa == {}
+          body({ error: "roa does not exist" })
+          return status 404        
+        end
+        SchoologyRecord.get_grades(student.schoology_records, params[:roa_number]).first.last
       end
     end
   end 

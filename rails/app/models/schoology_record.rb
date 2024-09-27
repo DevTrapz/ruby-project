@@ -60,8 +60,8 @@ class SchoologyRecord < ApplicationRecord
       ]
     end.group_by do |a| 
       a[0]
-    end.map do |k,v| 
-      [k, v.map{|a| a[1]}]
+    end.map do |user ,v| 
+      [user, v.map{|a| a[1]}]
     end.to_h
   end
 
@@ -69,7 +69,7 @@ class SchoologyRecord < ApplicationRecord
     require 'csv'
     headers = CSV.read(course_filename,headers:true).headers
     data_headers = headers.reduce([]){|res, a| res << a if a.include?("ROA");res}
-
+    
     #Import Teacher if not exist
     teacher = Teacher.find_or_create_by(email: teacher_email)
     #Import Students of not exist
@@ -83,6 +83,12 @@ class SchoologyRecord < ApplicationRecord
       record.grades = row.select{|header, value| data_headers.include?(header)}.to_h.as_json
       record.save!
     end
-    
+  end
+  
+  def self.validate_csv csv_filepath
+    require 'csv'
+    headers = CSV.read(csv_filepath, headers:true).headers
+    required_headers = ["First Name", "Last Name", "Unique User ID", "Username"].sort
+    headers.filter{|a| required_headers.include?(a)}.sort == required_headers
   end
 end
