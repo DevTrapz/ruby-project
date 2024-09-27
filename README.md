@@ -44,3 +44,22 @@ manually. Follow this sequence
 To connect to postgres, locate the User, Password and IP in the .env file and use this command
 
 `psql <Database> -h <IP> -U <User> -W <Password>`
+
+# Fix newly created file permissions on host (only for linux host)
+
+When creating files on the host, that the container volume is mounted, you'll
+need to grant file permission to edit the file from the container. Execute this
+command on the host to grant all users (including the container) to have access
+to read and write.
+
+`sudo chmod a+rw <file path>` or for entire directory `sudo chmod -R a+rw <directory path>`
+
+You can set default permissions on the host user, so that whenever you create a file
+all users (including the container) can edit the file.
+
+Use this command with caution! Since it defaults permissions on newly created files
+to all users, it will remain that when until you change it. This goes against security
+best practices of least-privilege. Ideally you would use a dedicated linux user when
+working on this project, then grant that user the default permissions.
+
+`umask 000`
