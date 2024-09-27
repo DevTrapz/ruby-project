@@ -4,12 +4,12 @@ describe Admin::Teachers, type: :request do
   
   context 'POST /create' do
     before 'create a teacher' do
-      response = create_teacher
+      create_teacher
       expect(response.status).to eq(201)
       check_payload response, "teacher"
     end
     it 'attempt to create a teacher with existing email' do
-      response = create_teacher
+      create_teacher
       expect(response.status).to eq(400)
       check_payload response, "error"
     end
@@ -35,7 +35,7 @@ describe Admin::Teachers, type: :request do
   
   context 'PUT /update/:teacher_id' do
     before 'create a teacher' do
-      response = create_teacher
+      create_teacher
       @id = JSON.parse(response.body)["id"]
       @params = {display_name: "Nikola", email: "nickola@engineer.edu"}
     end
@@ -49,27 +49,6 @@ describe Admin::Teachers, type: :request do
       put "/api/teachers/update/#{@id}", params: @params
       expect(response.status).to eq(404)
       check_payload response, "error"
-    end
-  end
-  
-  def create_teacher
-    params = {display_name: "Issac", email: "issac.newton@math.edu"}
-    post "/api/teachers/create", params: params
-    return response
-  end
-  
-  def check_payload response, payload_type
-    case payload_type
-    when "teacher"
-      expect(JSON.parse(response.body)).to eq(Teacher.first.as_json)
-    when "teacher_all"
-      expect(JSON.parse(response.body)).to eq([Teacher.first].as_json)
-    when "update"
-      expect(JSON.parse(response.body)).to eq(Teacher.first.as_json)
-    when "error"
-      expect(JSON.parse(response.body).keys.first).to eq("error")
-    when "success"
-      expect(JSON.parse(response.body).keys.first).to eq("success")
     end
   end
 end

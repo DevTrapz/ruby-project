@@ -1,4 +1,3 @@
-require 'csv'
 module Admin
   class Students < Grape::API
     resource :students do

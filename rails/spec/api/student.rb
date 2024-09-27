@@ -4,17 +4,17 @@ describe Admin::Students, type: :request do
   
   context 'POST /upload_gradebook/teacher/:teacher_id' do
     it 'Upload csv into students' do
-      response = create_students 
+      create_students 
       expect(response.status).to eq(201)
       check_payload response, "success"
     end
     it 'Attempt to upload a invalid csv format' do
-      response = create_students "bad gradebook.csv"
+      create_students "bad gradebook.csv"
       expect(response.status).to eq(400)
       check_payload response, "error"
     end
     it 'Attempt to upload csv using a non-existing teacher' do
-      response = create_students "gradebook.csv", false
+      create_students "gradebook.csv", false
       expect(response.status).to eq(404)
       check_payload response, "error"
     end
@@ -94,40 +94,6 @@ describe Admin::Students, type: :request do
       check_payload response, "error"
     end
   end
-  
-  def create_students fixture_file="gradebook.csv", use_teacher=true
-    @file = fixture_file_upload(fixture_file, 'multipart/form-data')
-    teacher = Teacher.create(display_name: "Issac", email: "issac.newton@math.edu")
-    teacher_id = use_teacher ? Teacher.first.id : (Teacher.first.id + 1)
-    params = {csv: @file}
-    post "/api/students/upload_gradebook/teacher/#{teacher_id}", params: params
-    response
-  end
-  
-  def import_csv 
-    Teacher.create(display_name: "Issac", email: "issac.newton@math.edu")
-    file = fixture_file_upload("gradebook.csv", 'multipart/form-data').path
-    SchoologyRecord.import_csv(file, Teacher.first.email, "pre-algebra")
-  end
-
-  def check_payload response, payload_type
-    case payload_type
-    when "student"
-      keys = ["lauid", "last_name", "first_name", "username"].sort
-      expect(JSON.parse(response.body).keys.filter{|a| keys.include?(a)}.sort == keys).to eq(true)
-    when "teacher_students"
-      keys = ["lauid", "last_name", "first_name", "username"].sort
-      expect(JSON.parse(response.body).all? { |a| a.keys.filter{|a| keys.include?(a)}.sort == keys }).to eq(true)
-    when "student_grades"
-      keys = ["attendance", "course", "grade"].sort
-      expect(JSON.parse(response.body).all? { |a| a.keys.sort == keys }).to eq(true)
-    when "teacher_grades"
-      keys = ["attendance", "course", "grade"].sort
-      JSON.parse(response.body).map {|a| a.first.second.all? { |a| expect(a.keys.sort == keys).to eq(true) } }  
-    when "error"
-      expect(JSON.parse(response.body).keys.first).to eq("error")
-    when "success"
-      expect(JSON.parse(response.body).keys.first).to eq("success")
-    end
-  end
 end
+
+

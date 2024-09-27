@@ -1,28 +1,38 @@
 require "rails_helper"
 
+
 describe Admin::Courses, type: :request do
-  context '/courses/get_all' do
+  context 'GET /courses/get_all' do
     it 'Retrieve all courses' do
+      import_csv
       get '/api/courses/get_all'
       expect(response.status).to eq(200)
+      check_payload response, "course_all"
+    end
+    it 'Retrieve all courses' do
+      get '/api/courses/get_all'
+      expect(response.status).to eq(404)
+      check_payload response, "error"
     end
   end
-
-  context '/courses/teacher' do
-    before 'create courses' do
-      file = fixture_file_upload('gradebook-export-SAMPLE.csv', 'multipart/form-data')
-      params = {csv: file, course_name: "pre-algebra", email: "issac.newton@math.edu"}
-      post '/api/schoology/upload_gradebook', params: params
-    end
-    it 'retrieve all courses by teacher id' do
-      params = {id: Teacher.first.id}
-      get '/api/courses/teacher', params: params
+  
+  context 'GET /courses/teacher' do
+    it 'retrieve all courses by teacher' do
+      import_csv
+      get "/api/courses/teacher/#{Teacher.first.id}"
       expect(response.status).to eq(200)
+      check_payload response, "course_teacher"
     end
-    it 'retrieve all courses by teacher email' do
-      params = {email: Teacher.first.email}
-      get '/api/courses/teacher', params: params
-      expect(response.status).to eq(200)
+    it 'attempt to retrieve all courses by non-existing teacher' do
+      get "/api/courses/teacher/1"
+      expect(response.status).to eq(404)
+      check_payload response, "error"
+    end
+    it 'attempt to retrieve non-existing courses' do
+      create_teacher
+      get "/api/courses/teacher/#{Teacher.first.id}"
+      expect(response.status).to eq(404)
+      check_payload response, "error"
     end
   end
 end 
